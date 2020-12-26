@@ -5,5 +5,13 @@
   <%= @room.name %>
 </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<p>
+  <%= link_to 'Edit', edit_room_path(@room) %> |
+  <%= link_to 'Back', rooms_path %>
+</p>
+
+<div id="messages">
+  <%= render @room.messages %>
+</div>
+
+<%= link_to "New Message", new_room_message_path(@room) %>
